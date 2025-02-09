@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smoother transition */
+  }
+
+  body {
+    @apply font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Ensure body also has smooth transition */
+  }
+}
+
+@font-face {
+  font-family: 'Publica';
+  src: url('./assets/font/PublicaPlay-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicaSans';
+  src: url('./assets/font/PublicaSans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
